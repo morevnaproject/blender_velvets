@@ -151,7 +151,7 @@ def getAudioTimeline(ar, fps):
             else:
                 audioData['channels'] = 1
 
-            if ("." + ext).lower() in validExts:
+            if ("." + ext).lower() in validExts or ext=='':
                 audioData['nExt'] = 1
                 audioData['ardour_name'] = "%s.%i" % (audioData['base_name'],
                                                       audioData['nExt'])
